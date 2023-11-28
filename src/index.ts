@@ -6,4 +6,6 @@ console.log(a(345));
 
 if (true) {
     console.log("first");
+    console.log("second");
+    console.log("first");
 }
