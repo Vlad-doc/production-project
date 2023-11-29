@@ -1,10 +1,10 @@
-import "./style.scss";
+import classes from "./Button.module.scss";
 
 function MyButton() {
     return (
         <div>
             Hello
-            <button className="button">I'm a button</button>
+            <button className={classes.red}>I'm a button</button>
         </div>
     );
 }
