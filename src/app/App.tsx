@@ -2,7 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Suspense } from "react";
 
 import { useTheme } from "app/providers/ThemeProvider";
-import { classNames } from "helpers/classNames";
+import { classNames } from "shared/lib/classNames/classNames";
 import { AboutPage } from "pages/AboutPage";
 import { MainPage } from "pages/MainPage";
 
