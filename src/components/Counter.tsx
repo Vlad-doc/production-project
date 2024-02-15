@@ -1,8 +1,8 @@
-import './Counter.scss';
+import sc from './Counter.module.scss';
 
 const Counter = () => {
   return (
-    <div>Counter</div>
+    <div className={sc.body}>Counter</div>
   )
 }
 
