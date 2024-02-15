@@ -1,14 +1,17 @@
-import { Suspense } from 'react'
-import { Route, Routes, Link } from 'react-router-dom'
+import { Suspense } from 'react';
+import { Route, Routes, Link } from 'react-router-dom';
 
-import { MainAsyncPage } from './pages/MainPage/MainPage.async'
-import { AboutAsyncPage } from './pages/AboutPage/AboutPage.async'
+import { MainAsyncPage } from './pages/MainPage/MainPage.async';
+import { AboutAsyncPage } from './pages/AboutPage/AboutPage.async';
 
-import './styles.scss'
+import './styles/styles.scss';
+import { useTheme } from './theme/useTheme';
 
 const App = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <div className='app'>
+    <div className={`app ${theme}`}>
       <Link to='/'>
         Главная
       </Link>
@@ -21,8 +24,11 @@ const App = () => {
           <Route path='/about' element={<AboutAsyncPage/>}/>
         </Routes>
       </Suspense>
+      <button onClick={toggleTheme}>
+        Сменить тему
+      </button>
     </div>
   )
-}
+};
 
-export default App
+export default App;
