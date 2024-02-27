@@ -3,15 +3,16 @@ import { Route, Routes, Link } from 'react-router-dom';
 
 import { MainAsyncPage } from './pages/MainPage/MainPage.async';
 import { AboutAsyncPage } from './pages/AboutPage/AboutPage.async';
+import { useTheme } from './theme/useTheme';
+import { classNames } from './helpers/classNames/classNames';
 
 import './styles/styles.scss';
-import { useTheme } from './theme/useTheme';
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames('app', {}, [theme])}>
       <Link to='/'>
         Главная
       </Link>
