@@ -1,6 +1,10 @@
+import png from 'shared/assets/icons/user.png';
+
 const MainPage = () => {
   return (
-    <div>MainComponent</div>
+    <div>
+      <img src={png} alt="" />
+      MainComponent</div>
   )
 }
 
