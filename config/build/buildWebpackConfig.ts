@@ -21,7 +21,7 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
             path: paths.build,
             clean: true,
         },
-        plugins: buildPlugins(paths),
+        plugins: buildPlugins(options),
         devServer: isDev ? buildDevServer(options) : undefined,
     };
 };
