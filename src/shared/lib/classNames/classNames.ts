@@ -8,5 +8,5 @@ export const classNames = (cls: string, mods?: Mods, additional?: string[]): str
             .filter(([key, value]) => !!value)
             .map(([cls]) => cls)
     ]
-    .join(' ');
+        .join(" ");
 };

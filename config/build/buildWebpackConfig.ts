@@ -14,10 +14,10 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
         module: {
             rules: buildLoaders(options),
         },
-        devtool: isDev ? 'inline-source-map' : undefined,
+        devtool: isDev ? "inline-source-map" : undefined,
         resolve: buildResolvers(paths),
         output: {
-            filename: '[name].[contenthash].js',
+            filename: "[name].[contenthash].js",
             path: paths.build,
             clean: true,
         },

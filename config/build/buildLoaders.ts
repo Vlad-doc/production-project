@@ -6,7 +6,7 @@ import { BuildOptions } from "./types/config";
 export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => {
     const tsLoader = {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: "ts-loader",
         exclude: /node_modules/,
     };
 
@@ -18,7 +18,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
                 loader: "css-loader",
                 options: {
                     modules: {
-                        auto: (resPath: string) => resPath.includes('.module.scss'),
+                        auto: (resPath: string) => resPath.includes(".module.scss"),
                         localIdentName: isDev
                             ? "[path][name]__[local]--[hash:base64:8]"
                             : "[hash:base64:8]",
@@ -32,14 +32,14 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     const svgLoader = {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
-        use: ['@svgr/webpack'],
+        use: ["@svgr/webpack"],
     };
 
     const fileLoader = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
             {
-                loader: 'file-loader',
+                loader: "file-loader",
             },
         ],
     };
@@ -49,5 +49,5 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
         stylesLoader,
         svgLoader,
         fileLoader,
-    ]
+    ];
 };
