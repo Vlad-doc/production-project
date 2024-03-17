@@ -3,5 +3,7 @@
     "Главная": "Main Page",
     "О сайте": "About Us",
     "Свернуть": "Toggle",
-    "Страница не найдена": "Page Not Found"
+    "Страница не найдена": "Page Not Found",
+    "Произошла непредвиденная ошибка": "An unexpected error occurred",
+    "Обновить страницу": "Refresh the page"
 }
