@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --config ./config/jest/jest.config.ts",
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack build --env mode=production",
     "build:dev": "webpack build --env mode=development",
@@ -17,8 +17,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-react": "^7.24.1",
     "@babel/preset-typescript": "^7.23.3",
     "@svgr/webpack": "^8.1.0",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.2",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
@@ -39,6 +42,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "mini-css-extract-plugin": "^2.7.7",
